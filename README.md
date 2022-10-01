@@ -32,6 +32,7 @@ Steps required to install Manim via `pip3`
     # Latex 'full' - 1.9GB! (4GB Installed!!)
 
     $ sudo dnf libglvnd-glx libglvnd-opengl libglvnd-devel
+    # OpenGL
     # NOTE: Not sure about this. mesa{-devel} already present or depedency
 
     ```
@@ -61,4 +62,7 @@ Steps required to install Manim via `pip3`
     ```sh
     $ manimgl example_scenes.py OpeningManimExample
     # File is here (copied from https://github.com/3b1b/manim)
+
+    $ manimgl example_scenes.py
+    # Pick the example you want to run - needs to be 01 etc, not 1
     ```
