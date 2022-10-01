@@ -4,11 +4,11 @@ Steps required to install Manim via `pip3`
 
 ## Guides Used
 
-1. [Manim Docs](https://manim.readthedocs.io/en/latest/installation/linux.html)
-   - This is for Ubuntu and I may come back to double check 
-2. [3b1b/manim Wiki](https://github.com/3b1b/manim/wiki/Install-on-Linux-Fedora-29)
+1. [3b1b/manim](https://github.com/3b1b/manim)
+2. [Manim Docs](https://manim.readthedocs.io/en/latest/installation/linux.html)
+   - This is for Ubuntu and I may come back to double check
+3. [3b1b/manim Wiki](https://github.com/3b1b/manim/wiki/Install-on-Linux-Fedora-29)
    - An old guide for Fedora 29!
-3. ...
 
 ## Steps
 
@@ -26,7 +26,10 @@ Steps required to install Manim via `pip3`
     # Free version of ffmpeg - 27MB
 
     $ sudo dnf install texlive
-    # Latex the full bhoona - 424MB
+    # Latex - 424MB
+
+    $ sudo dnf install textlive-scheme-full
+    # Latex 'full' - 1.9GB! (4GB Installed!!)
 
     $ sudo dnf libglvnd-glx libglvnd-opengl libglvnd-devel
     # NOTE: Not sure about this. mesa{-devel} already present or depedency
@@ -46,4 +49,16 @@ Steps required to install Manim via `pip3`
 
     ```
 
-3. 
+3. `PATH` Setup
+
+    ```sh
+    # Update PATH in .bashrc or similar to include the above PATH
+    PATH=$PATH:$HOME/.local/bin
+    ```
+
+4. Try it!
+
+    ```sh
+    $ manimgl example_scenes.py OpeningManimExample
+    # File is here (copied from https://github.com/3b1b/manim)
+    ```
